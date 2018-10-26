@@ -1,14 +1,18 @@
 #include <string>
+#include <iostream>
 
 class Position {
 private:
-	int x, y, z;
+	int xyz[3];
 public:
-	Position(): x(0), y(0), z(0){}
-	void updatePos(int x, int y, int z) {
-		this->x = x;
-		this->y = y;
-		this->z = z;
+	Position(){}
+	void updatePos(int x , int y, int z) {
+		xyz[1] = x;
+		xyz[2] = y;
+		xyz[3] = z;
+	}
+	int* getPos() {
+		return *xyz[];
 	}
 };
 
@@ -39,6 +43,9 @@ public:
 		setAttack(0);
 		updatePos(10, 0, 0);
 	}
+	void mkAttack() override{
+		std::cout << "gunshot" << std::endl;
+	}
 
 };
 class Enemy : public Entity {
@@ -47,6 +54,7 @@ class Enemy : public Entity {
 		setAttack(0);
 		updatePos(10, 10, 5);
 	}
+
 };
 
 int main() {
