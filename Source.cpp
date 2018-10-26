@@ -1,15 +1,15 @@
 #include <string>
 #include <iostream>
-
+enum coords{x = 1, y = 2, z = 3};
 class Position {
 private:
 	int xyz[3];
 public:
 	Position(){}
-	void updatePos(int x , int y, int z) {
-		xyz[1] = x;
-		xyz[2] = y;
-		xyz[3] = z;
+	void updatePos(int X , int Y, int Z) {
+		xyz[x] = X;
+		xyz[y] = Y;
+		xyz[z] = Z;
 	}
 	int* getPos() {
 		return xyz;
