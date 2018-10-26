@@ -12,7 +12,7 @@ public:
 		xyz[3] = z;
 	}
 	int* getPos() {
-		return *xyz[];
+		return xyz;
 	}
 };
 
